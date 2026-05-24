@@ -5,6 +5,7 @@
 ## Bahan
 
 [Termux]
+
 [Referensi](https://hermes-agent.nousresearch.com/docs/getting-started/termux)
 
 ## Tutorial
@@ -54,32 +55,39 @@ hermes version
 hermes doctor
 ```
 
-9. Start Hermes
-```
-hermes
-```
-
-```
-hermes model
-```
-
+9. Setup Hermes
 ```
 hermes setup
 ```
 
 
 
+## Setting model ollama cloud untuk AI Agent
 
-```
-http://localhost:11434/v1
-```
-
+1. Install Ollama dan jalankan
+Buka tab baru termux dan jalankan command ini
 ```
 pkg install ollama
 ollama serve
 ```
 
+2. Login ollama
+Buka tab baru termux dan jalankan command ini
 ```
 ollama run gemma4:31b-cloud
 ```
+ketika muncul link nya copy dan paste di browser dan login via google atau lainnya, setelah itu klik CONNECT
 
+
+### Settingan di hermes setup
+- quick setup
+- Ollama Cloud
+- API Key : Ollama
+- Base URL : http://localhost:11434/v1
+- Pilih model no. 38 (Custom model name)
+- Model name : gemma4:31b-cloud
+- Keep current (local)
+- set up messaging now
+- Pilih bebas yang mau diaktifkan dengan cara centang tekan spasi keyboard
+- Setting sesuai dengan platform yg dipilih (tutorial ada ketika waktu setting)
+- Done
