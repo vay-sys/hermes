@@ -6,6 +6,9 @@
 
 [Termux]
 
+## Tutorial
+
+Update Termux and install system packages
 
 ```
 termux-setup-storage
