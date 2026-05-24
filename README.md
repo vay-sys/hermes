@@ -59,20 +59,20 @@ hermes doctor
 ```
 hermes setup
 ```
-
+Sebelum setup hermes minimal sudah ada AI model yang akan digunakan, kalau belum ada ikutin tutorial setting model ollama cloud yang menyediakan free trial
 
 
 ## Setting model ollama cloud untuk AI Agent
 
 1. Install Ollama dan jalankan
-Buka tab baru termux dan jalankan command ini
+Buka tab/session baru termux dan jalankan command ini
 ```
 pkg install ollama
 ollama serve
 ```
 
 2. Login ollama
-Buka tab baru termux dan jalankan command ini
+Buka tab/session baru termux dan jalankan command ini
 ```
 ollama run gemma4:31b-cloud
 ```
@@ -91,3 +91,17 @@ ketika muncul link nya copy dan paste di browser dan login via google atau lainn
 - Pilih bebas yang mau diaktifkan dengan cara centang tekan spasi keyboard
 - Setting sesuai dengan platform yg dipilih (tutorial ada ketika waktu setting)
 - Done
+
+
+# Tambahan
+
+### Set agar jalankan hermes gateway di termux lebih simple
+Kirim di hermes ai
+```
+Buatkan script termux untuk sekali jalan dan taruh di home atau lokasi awal ketika membuka termux yaitu ~ $
+
+cd hermes-agent
+hermes gateway restart
+
+contoh nama script nya hermesgo.sh
+```
