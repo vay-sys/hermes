@@ -6,11 +6,6 @@ termux-setup-storage
 ```
 
 ```
-cd /storage/shared/hermes
-```
-
-
-```
 pkg update && pkg upgrade
 ```
 
