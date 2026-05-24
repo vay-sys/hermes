@@ -29,7 +29,10 @@ cd hermes-agent
 ```
 
 ```
-ollama
+python -m venv venv
+source venv/bin/activate
+export ANDROID_API_LEVEL="$(getprop ro.build.version.sdk)"
+python -m pip install --upgrade pip setuptools wheel
 ```
 
 ```
