@@ -15,12 +15,13 @@ pkg update && pkg upgrade
 ```
 
 ```
-pkg install -y git python clang rust make pkg-config libffi openssl nodejs ripgrep ffmpeg
+pkg install git
 ```
 
 ```
-pkg install git
+pkg install -y git python clang rust make pkg-config libffi openssl nodejs ripgrep ffmpeg
 ```
+
 
 ```
 git clone --recurse-submodules https://github.com/NousResearch/hermes-agent.git
