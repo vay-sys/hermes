@@ -31,6 +31,27 @@ python -m pip install -e '.[termux]' -c constraints-termux.txt
 ```
 
 ```
+ln -sf "$PWD/venv/bin/hermes" "$PREFIX/bin/hermes"
+```
+
+```
+hermes version
+hermes doctor
+```
+
+```
+hermes
+```
+
+```
+hermes model
+```
+
+```
+hermes setup
+```
+
+```
 http://localhost:11434/v1
 ```
 
