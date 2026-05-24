@@ -27,6 +27,10 @@ python -m pip install --upgrade pip setuptools wheel
 ```
 
 ```
+python -m pip install -e '.[termux]' -c constraints-termux.txt
+```
+
+```
 http://localhost:11434/v1
 ```
 
