@@ -82,6 +82,7 @@ Catatan penting: Sebelum menjalankan hermes setup, kamu harus sudah punya model 
 ## Setting model ollama cloud untuk AI Agent
 
 1. Install Ollama dan jalankan
+
 Buka tab/session Termux baru lagi, lalu ketik:
 ```
 pkg install ollama
@@ -89,6 +90,7 @@ ollama serve
 ```
 
 2. Login ke Ollama Cloud
+
 Buka tab/session baru termux dan jalankan command ini
 ```
 ollama run gemma4:31b-cloud
