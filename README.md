@@ -1,6 +1,12 @@
 # hermes termux
 
 
+
+## Bahan
+
+[Termux]
+
+
 ```
 termux-setup-storage
 ```
