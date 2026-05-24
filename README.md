@@ -11,6 +11,7 @@
 ## Tutorial
 
 1. Setting perizinan file termux
+
 (Ini meminta izin agar Termux bisa akses folder penyimpanan HP kamu)
 ```
 termux-setup-storage
@@ -25,12 +26,14 @@ pkg update && pkg upgrade -y
 ```
 
 3. Install paket-paket yang dibutuhkan
+
 (Menginstal berbagai tools dan bahasa pemrograman yang diperlukan)
 ```
 pkg install -y git python clang rust make pkg-config libffi openssl nodejs ripgrep ffmpeg
 ```
 
 4. Download (Clone) Hermes
+
 (Mengunduh program Hermes dari GitHub dan masuk ke foldernya)
 ```
 git clone --recurse-submodules https://github.com/NousResearch/hermes-agent.git
@@ -38,6 +41,7 @@ cd hermes-agent
 ```
 
 5. Buat virtual environment
+
 (Membuat lingkungan Python terpisah agar tidak konflik)
 ```
 python -m venv venv
@@ -47,18 +51,21 @@ python -m pip install --upgrade pip setuptools wheel
 ```
 
 6. Install Hermes versi Termux
+
 (Menginstal Hermes khusus untuk Termux)
 ```
 python -m pip install -e '.[termux]' -c constraints-termux.txt
 ```
 
 7. Tambahkan Hermes ke PATH
+
 (Supaya kamu bisa menjalankan perintah hermes dari mana saja)
 ```
 ln -sf "$PWD/venv/bin/hermes" "$PREFIX/bin/hermes"
 ```
 
 8. Cek apakah sudah berhasil terinstall
+
 (Melihat versi dan mengecek apakah ada masalah)
 ```
 hermes version
