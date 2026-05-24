@@ -104,7 +104,7 @@ Setelah muncul link, copy link tersebut, buka di browser, lalu login pakai Googl
 
 # Tambahan
 
-### Menjalankan Hermes
+### Menjalankan Hermes di Termux
 ```
 hermes
 ```
