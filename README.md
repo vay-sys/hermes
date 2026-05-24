@@ -15,10 +15,6 @@ pkg update && pkg upgrade
 ```
 
 ```
-pkg install git
-```
-
-```
 pkg install -y git python clang rust make pkg-config libffi openssl nodejs ripgrep ffmpeg
 ```
 
