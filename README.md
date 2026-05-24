@@ -25,6 +25,10 @@ cd hermes-agent
 ```
 
 ```
+git submodule update --init --recursive
+```
+
+```
 python -m venv venv
 source venv/bin/activate
 export ANDROID_API_LEVEL="$(getprop ro.build.version.sdk)"
