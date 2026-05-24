@@ -59,7 +59,7 @@ hermes doctor
 ```
 hermes setup
 ```
-Sebelum setup hermes minimal sudah ada AI model yang akan digunakan, kalau belum ada ikutin tutorial setting model ollama cloud yang menyediakan free trial
+Sebelum setup hermes minimal sudah ada AI model yang akan digunakan, kalau belum ada ikutin tutorial setting model ollama cloud yang menyediakan free trial di bawah ini
 
 
 ## Setting model ollama cloud untuk AI Agent
