@@ -11,27 +11,33 @@
 ## Tutorial
 
 1. Setting perizinan file termux
+(Ini meminta izin agar Termux bisa akses folder penyimpanan HP kamu)
 ```
 termux-setup-storage
 ```
 
+
 2. Update Termux
+(Memperbarui semua paket di Termux supaya up-to-date)
 ```
 pkg update && pkg upgrade -y
 ```
 
-3. install system packages
+3. Install paket-paket yang dibutuhkan
+(Menginstal berbagai tools dan bahasa pemrograman yang diperlukan)
 ```
 pkg install -y git python clang rust make pkg-config libffi openssl nodejs ripgrep ffmpeg
 ```
 
-4. Clone Hermes
+4. Download (Clone) Hermes
+(Mengunduh program Hermes dari GitHub dan masuk ke foldernya)
 ```
 git clone --recurse-submodules https://github.com/NousResearch/hermes-agent.git
 cd hermes-agent
 ```
 
-5. Create a virtual environment
+5. Buat virtual environment
+(Membuat lingkungan Python terpisah agar tidak konflik)
 ```
 python -m venv venv
 source venv/bin/activate
@@ -39,17 +45,20 @@ export ANDROID_API_LEVEL="$(getprop ro.build.version.sdk)"
 python -m pip install --upgrade pip setuptools wheel
 ```
 
-6. Install the tested Termux bundle
+6. Install Hermes versi Termux
+(Menginstal Hermes khusus untuk Termux)
 ```
 python -m pip install -e '.[termux]' -c constraints-termux.txt
 ```
 
-7. Put hermes on your Termux PATH
+7. Tambahkan Hermes ke PATH
+(Supaya kamu bisa menjalankan perintah hermes dari mana saja)
 ```
 ln -sf "$PWD/venv/bin/hermes" "$PREFIX/bin/hermes"
 ```
 
-8. Verify the install
+8. Cek apakah sudah berhasil terinstall
+(Melihat versi dan mengecek apakah ada masalah)
 ```
 hermes version
 hermes doctor
@@ -59,24 +68,24 @@ hermes doctor
 ```
 hermes setup
 ```
-Sebelum setup hermes minimal sudah ada AI model yang akan digunakan, kalau belum ada ikutin tutorial setting model ollama cloud yang menyediakan free trial di bawah ini
+Catatan penting: Sebelum menjalankan hermes setup, kamu harus sudah punya model AI yang akan dipakai. Kalau belum ada, ikuti langkah di bawah ini.
 
 
 ## Setting model ollama cloud untuk AI Agent
 
 1. Install Ollama dan jalankan
-Buka tab/session baru termux dan jalankan command ini
+Buka tab/session Termux baru lagi, lalu ketik:
 ```
 pkg install ollama
 ollama serve
 ```
 
-2. Login ollama
+2. Login ke Ollama Cloud
 Buka tab/session baru termux dan jalankan command ini
 ```
 ollama run gemma4:31b-cloud
 ```
-ketika muncul link nya copy dan paste di browser dan login via google atau lainnya, setelah itu klik CONNECT
+Setelah muncul link, copy link tersebut, buka di browser, lalu login pakai Google atau akun lain. Setelah login, klik tombol CONNECT.
 
 
 ### Settingan di hermes setup
@@ -95,13 +104,17 @@ ketika muncul link nya copy dan paste di browser dan login via google atau lainn
 
 # Tambahan
 
-### Set agar jalankan hermes gateway di termux lebih simple
-Kirim di hermes ai
+### Menjalankan Hermes
 ```
-Buatkan script termux untuk sekali jalan dan taruh di home atau lokasi awal ketika membuka termux yaitu ~ $
+hermes
+```
 
-cd hermes-agent
-hermes gateway restart
+### Menjalankan Hermes agar bisa digunakan di telegram atau lainnya
+```
+hermes gateway
+```
 
-contoh nama script nya hermesgo.sh
+### Full command hermes
+```
+hermes help
 ```
