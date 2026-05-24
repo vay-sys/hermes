@@ -1,11 +1,17 @@
 # hermes termux
 
 
+```
+termux-setup-storage
+```
 
+```
+cd /storage/shared/hermes
+```
 
 
 ```
-pkg update && pkg upgrade -y
+pkg update && pkg upgrade
 ```
 
 ```
