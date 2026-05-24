@@ -13,7 +13,8 @@ pkg install -y git python clang rust make pkg-config libffi openssl nodejs ripgr
 ```
 
 ```
-curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
+git clone --recurse-submodules https://github.com/NousResearch/hermes-agent.git
+cd hermes-agent
 ```
 
 ```
