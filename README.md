@@ -8,6 +8,8 @@
 
 [Referensi](https://hermes-agent.nousresearch.com/docs/getting-started/termux)
 
+[Troubleshooting](https://hermes-agent.nousresearch.com/docs/getting-started/termux#troubleshooting)
+
 
 ## One Time Auto Installer
 
