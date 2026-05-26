@@ -8,7 +8,16 @@
 
 [Referensi](https://hermes-agent.nousresearch.com/docs/getting-started/termux)
 
-## Tutorial
+
+## One Time Auto Installer
+
+Cukup copas dan jalankan maka akan otomatis jalan dan install sendiri semuanya
+```
+curl -sSL https://raw.githubusercontent.com/vay-sys/hermes/main/install.sh | bash
+```
+
+
+## Tutorial Manual
 
 1. Setting perizinan file termux
 
