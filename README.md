@@ -10,14 +10,14 @@
 
 [Troubleshooting](https://hermes-agent.nousresearch.com/docs/getting-started/termux#troubleshooting)
 
+[One-line Auto Installer](https://hermes-agent.nousresearch.com/docs/getting-started/termux#option-1-one-line-installer)
 
-## One Time Auto Installer
+## One-line Auto Installer
 
 Cukup copas dan jalankan maka akan otomatis jalan dan install sendiri semuanya (Tidak termasuk Setting model ollama cloud untuk AI Agent)
 ```
 curl -sSL https://raw.githubusercontent.com/vay-sys/hermes/main/install.sh | bash
 ```
-
 
 ## Tutorial Manual (Recommended)
 
