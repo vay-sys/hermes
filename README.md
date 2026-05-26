@@ -17,7 +17,7 @@ curl -sSL https://raw.githubusercontent.com/vay-sys/hermes/main/install.sh | bas
 ```
 
 
-## Tutorial Manual
+## Tutorial Manual (Recommended)
 
 1. Setting perizinan file termux
 
