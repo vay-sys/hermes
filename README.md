@@ -19,7 +19,7 @@ Cukup copas dan jalankan maka akan otomatis jalan dan install sendiri semuanya (
 curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
 ```
 
-## Tutorial Manual (Recommended)
+## Tutorial Manual (Explicit)
 
 1. Setting perizinan file termux
 
