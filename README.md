@@ -16,7 +16,7 @@
 
 Cukup copas dan jalankan maka akan otomatis jalan dan install sendiri semuanya (Tidak termasuk Setting model ollama cloud untuk AI Agent)
 ```
-curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/vay-sys/hermes/main/install.sh | bash
 ```
 
 ## Tutorial Manual (Explicit)
