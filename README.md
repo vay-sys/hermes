@@ -33,7 +33,7 @@ termux-setup-storage
 
 (Memperbarui semua paket di Termux supaya up-to-date)
 ```
-pkg update && pkg upgrade -y
+pkg update -y && pkg upgrade -y
 ```
 
 3. Install paket-paket yang dibutuhkan
