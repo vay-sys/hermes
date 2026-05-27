@@ -5,7 +5,7 @@ GREEN='\033[0;32m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
-echo -e "${BLUE}🌸 Memulai Instalasi Hermes Termux oleh Lyra... ✨${NC}"
+echo -e "${BLUE}🌸 Memulai Instalasi Hermes Termux... ✨${NC}"
 
 # 1. Perizinan Storage
 echo -e "${GREEN}[1/8] Setting perizinan storage...${NC}"
@@ -13,7 +13,7 @@ termux-setup-storage
 
 # 2. Update & Upgrade
 echo -e "${GREEN}[2/8] Update & Upgrade paket...${NC}"
-pkg update -y && pkg upgrade -y
+pkg update -y && pkg upgrade -y -o Dpkg::Options::="--force-confnew"
 
 # 3. Install Dependencies
 echo -e "${GREEN}[3/8] Install paket-paket dasar...${NC}"
