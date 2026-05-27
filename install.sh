@@ -35,6 +35,13 @@ python -m pip install --upgrade pip setuptools wheel
 
 # 6. Install Hermes versi Termux
 echo -e "${GREEN}[6/8] Menginstal Hermes (Sabar ya Master, proses ini agak lama)...${NC}"
+pkg install python-psutil
+deactivate
+rm -rf venv
+python -m venv venv --system-site-packages
+source venv/bin/activate
+pip install --upgrade pip
+python -c "import psutil; print(psutil.version)"
 python -m pip install -e '.[termux]' -c constraints-termux.txt
 
 # 7. Symlink ke PATH
