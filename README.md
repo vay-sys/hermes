@@ -8,18 +8,8 @@
 
 [Referensi](https://hermes-agent.nousresearch.com/docs/getting-started/termux)
 
-[Troubleshooting](https://hermes-agent.nousresearch.com/docs/getting-started/termux#troubleshooting)
 
-[One-line Auto Installer](https://hermes-agent.nousresearch.com/docs/getting-started/termux#option-1-one-line-installer)
-
-## One-line Auto Installer
-
-Cukup copas dan jalankan maka akan otomatis jalan dan install sendiri semuanya (Tidak termasuk Setting model ollama cloud untuk AI Agent)
-```
-curl -fsSL https://raw.githubusercontent.com/vay-sys/hermes/main/install.sh | bash
-```
-
-## Tutorial Manual (Explicit)
+## Install Linux Ubuntu (Termux)
 
 1. Setting perizinan file termux
 
@@ -29,113 +19,90 @@ termux-setup-storage
 ```
 
 
-2. Update Termux
+2. Install Distro Linux Ubuntu
 
-(Memperbarui semua paket di Termux supaya up-to-date)
+(Instalasi distro Linux Ubuntu)
 ```
-pkg update -y && pkg upgrade -y
-```
-
-3. Install paket-paket yang dibutuhkan
-
-(Menginstal berbagai tools dan bahasa pemrograman yang diperlukan)
-```
-pkg install -y git python clang rust make pkg-config libffi openssl nodejs ripgrep ffmpeg
+pkg update && pkg upgrade -y
+pkg install -y wget curl proot-distro
+proot-distro install ubuntu
 ```
 
-4. Download (Clone) Hermes
+3. Login Distro Linux Ubuntu
 
-(Mengunduh program Hermes dari GitHub dan masuk ke foldernya)
+(Pindah dari termux ke ubuntu)
 ```
-git clone --recurse-submodules https://github.com/NousResearch/hermes-agent.git
-cd hermes-agent
-```
-
-5. Buat virtual environment
-
-(Membuat lingkungan Python terpisah agar tidak konflik)
-```
-python -m venv venv
-source venv/bin/activate
-export ANDROID_API_LEVEL="$(getprop ro.build.version.sdk)"
-python -m pip install --upgrade pip setuptools wheel
+proot-distro login ubuntu
 ```
 
-6. Install Hermes versi Termux
+## Install Hermes 
 
-(Menginstal Hermes khusus untuk Termux)
-```
-python -m pip install -e '.[termux]' -c constraints-termux.txt
-```
+1. Install Hermes One-line Auto Installer
 
-7. Tambahkan Hermes ke PATH
-
-(Supaya kamu bisa menjalankan perintah hermes dari mana saja)
+(Download dan Install Hermes Agent)
 ```
-ln -sf "$PWD/venv/bin/hermes" "$PREFIX/bin/hermes"
+curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
 ```
 
-8. Cek apakah sudah berhasil terinstall
+2. Setup Hermes Agent
 
-(Melihat versi dan mengecek apakah ada masalah)
+(Pastikan sudah punya API Key terlebih dahulu)
+```
+### Settingan di hermes setup
+- Full Setup
+- Pilih Provider yang sudah dipunyai
+- Masukan Base URL dan API Key
+- select terminal backend : Keep current (local)
+- select platforms to configure : Pilih bebas yang mau diaktifkan dengan cara centang tekan spasi keyboard
+- Setting sesuai dengan platform yg dipilih (tutorial ada ketika waktu setting)
+- Setting Tools for CLI : Pilih bebas yang mau diaktifkan dengan cara centang tekan spasi keyboard
+- Selanjutnya pilih yang diinginkan atau sesuai rekomendasi hermes
+- Done
+```
+
+3. Cek versi Hermes
+
+(Cek apakah sudah aman)
 ```
 hermes version
 hermes doctor
+hermes doctor --fix
 ```
 
-9. Setup Hermes
-```
-hermes setup
-```
-Catatan penting: Sebelum menjalankan hermes setup, kamu harus sudah punya model AI yang akan dipakai. Kalau belum ada, ikuti langkah di bawah ini.
+## Menjalankan Hermes
 
+1. Menjalankan Hermes
 
-## Setting model ollama cloud untuk AI Agent
+(Ada 2 Cara untuk menjalankannya)
 
-1. Install Ollama dan jalankan
-
-Buka tab/session Termux baru lagi, lalu ketik:
-```
-pkg install ollama
-ollama serve
-```
-
-2. Login ke Ollama Cloud
-
-Buka tab/session baru termux dan jalankan command ini
-```
-ollama run gemma4:31b-cloud
-```
-Setelah muncul link, copy link tersebut, buka di browser, lalu login pakai Google atau akun lain. Setelah login, klik tombol CONNECT.
-
-
-### Settingan di hermes setup
-- quick setup
-- Ollama Cloud
-- API Key : Ollama
-- Base URL : http://localhost:11434/v1
-- Pilih model no. 38 (Custom model name)
-- Model name : gemma4:31b-cloud
-- Keep current (local)
-- set up messaging now
-- Pilih bebas yang mau diaktifkan dengan cara centang tekan spasi keyboard
-- Setting sesuai dengan platform yg dipilih (tutorial ada ketika waktu setting)
-- Done
-
-
-# Tambahan
-
-### Menjalankan Hermes di Termux
+a. Menjalankan di CLI
 ```
 hermes
 ```
 
-### Menjalankan Hermes agar bisa digunakan di telegram atau lainnya
+b. Menjalankan di platform lain yang sudah di setting di setup hermes
 ```
 hermes gateway
 ```
 
-### Full command hermes
+
+Catatan penting: Sebelum menjalankan hermes setup, kamu harus sudah punya API Key yang akan dipakai. Kalau belum ada, di bawah ini API Key gratis trial.
+
+
+## Website API Key Gratis Trial
+
+- https://ollama.com/
+- https://www.orcarouter.ai/playground
+- https://zyloo.io/dashboard/free-balance
+- https://aerolink.lat/dashboard
+
+
+# Tambahan
+
+### Setting 9router
+(Jalankan instalasi NPM dan 9Router di termux terlebih dahulu sebelum install di Ubuntu)
 ```
-hermes help
+npm install -g 9router
+9router
 ```
+Full Details : https://github.com/decolua/9router
