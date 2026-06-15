@@ -6,7 +6,7 @@
 
 [Termux]
 
-[Referensi]([https://hermes-agent.nousresearch.com/docs/getting-started/termux](https://hermes-agent.nousresearch.com/docs/getting-started/installation))
+[Referensi](https://hermes-agent.nousresearch.com/docs/getting-started/installation)
 
 
 ## Install Linux Ubuntu (Termux)
