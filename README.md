@@ -100,9 +100,20 @@ Catatan penting: Sebelum menjalankan hermes setup, kamu harus sudah punya API Ke
 # Tambahan
 
 ### Setting 9router
-(Jalankan instalasi NPM dan 9Router di termux terlebih dahulu sebelum install di Ubuntu)
+
+1. Install 9router di Termux
+(Install 9Router di termux terlebih dahulu sebelum install di Ubuntu)
 ```
+npm install -g 9router
+```
+
+2. Install 9router di Ubuntu
+(Install dan buka 9router di Ubuntu)
+
+```
+## Login ubuntu dulu
 npm install -g 9router
 9router
 ```
+
 Full Details : https://github.com/decolua/9router
