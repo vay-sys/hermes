@@ -25,6 +25,7 @@ termux-setup-storage
 ```
 pkg update && pkg upgrade -y
 pkg install -y wget curl proot-distro
+pkg install proot-distro
 proot-distro install ubuntu
 ```
 
