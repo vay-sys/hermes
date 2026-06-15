@@ -67,6 +67,7 @@ curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
 hermes version
 hermes doctor
 hermes doctor --fix
+hermes skills list
 ```
 
 ## Menjalankan Hermes
