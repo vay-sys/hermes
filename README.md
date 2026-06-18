@@ -42,6 +42,7 @@ proot-distro login ubuntu
 
 (Download dan Install Hermes Agent)
 ```
+apt update && apt upgrade -y
 curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
 ```
 
